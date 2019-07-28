@@ -126,10 +126,18 @@ class BoletoPHP
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function generateBoleto()
+    public function generateBoleto($banco)
     {
-        $template = $this->twig->load('layout_itau.html.twig');
-        return $template->render(['dadosboleto' => $this->dadosboleto]);
+        switch ($banco):
+            case 'itau':
+                $template = $this->twig->load('layout_itau.html.twig');
+                return $template->render(['dadosboleto' => $this->dadosboleto]);
+                break;
+            case 'sicredi':
+                $template = $this->twig->load('layout_sicredi.html.twig');
+                return $template->render(['dadosboleto' => $this->dadosboleto]);
+                break;
+        endswitch;
     }
 
     /**

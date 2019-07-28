@@ -62,11 +62,9 @@ final class BoletoTest extends TestCase
 
         $boletoPHP = new BoletoPHP($dadosboleto, $order, $client_endereco, $empresa_endereco);
 
-//        var_dump($boletoPHP->getDadosboleto());
-
         echo $boletoPHP->getDadosboleto()['codigo_barras'];
 
-        file_put_contents('test.html', $boletoPHP->generateBoleto());
+        file_put_contents('test.html', $boletoPHP->generateBoleto('sicredi'));
 
         $this->assertEquals('19', $boletoPHP->getDadosboleto()['inicio_nosso_numero']);
     }
