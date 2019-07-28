@@ -34,7 +34,7 @@ class BoletoPHP
     public function __construct($dadosboleto, $order, $client_endereco, $empresa_endereco)
     {
         $this->loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
-        $this->twig = new \Twig\Environment($this->loader, ['cache' => __DIR__ . '/compilation_cache']);
+        $this->twig = new \Twig\Environment($this->loader, ['cache' => __DIR__ . '/compilation_cache', 'auto_reload' => true]);
         $function = new \Twig\TwigFunction('fbarcode', [$this, 'fbarcode']);
         $this->twig->addFunction($function);
 
