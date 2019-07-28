@@ -27,10 +27,11 @@ class BoletoPHP
      *
      * @param array $dadosboleto
      * @param array $order
-     * @param array $endereco
+     * @param array $client_endereco
+     * @param array $empresa_endereco
      * @throws Exception
      */
-    public function __construct($dadosboleto, $order, $endereco)
+    public function __construct($dadosboleto, $order, $client_endereco, $empresa_endereco)
     {
 
         $this->loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
@@ -53,10 +54,10 @@ class BoletoPHP
         $this->dadosboleto['data_processamento'] = date('d/m/Y');
         $this->dadosboleto['valor_boleto'] = number_format(str_replace(',', '.', $order['valor_total']) + $dadosboleto['taxa'], 2, ',', '');
         $this->dadosboleto['sacado'] = $order['nome_completo'];
-        $this->dadosboleto['endereco1'] = $endereco['endereco'] . ', ' . $endereco['numero'];
-        $this->dadosboleto['endereco2'] = $endereco['cidade'] . ' - ' . $endereco['estado'] . ' -  CEP: ' . $endereco['cep'];
-        $this->dadosboleto['demonstrativo1'] = 'Pagamento de Compra na ' . $order['empresa_nome'];
-        $this->dadosboleto['demonstrativo2'] = 'Taxa bancária - ' . $dadosboleto['taxa_bancaria'] . ' ' . number_format($dadosboleto['taxa'], 2, ',', '');
+        $this->dadosboleto['endereco1'] = $client_endereco['endereco'] . ', ' . $client_endereco['numero'];
+        $this->dadosboleto['endereco2'] = $client_endereco['cidade'] . ' - ' . $client_endereco['estado'] . ' -  CEP: ' . $client_endereco['cep'];
+        $this->dadosboleto['demonstrativo1'] = 'Pagamento de Compra na ' . $empresa_endereco['nome'];
+        $this->dadosboleto['demonstrativo2'] = 'Taxa bancária - ' . $dadosboleto['especie'] . ' ' . number_format($dadosboleto['taxa'], 2, ',', '');
         $this->dadosboleto['demonstrativo3'] = 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO';
         $this->dadosboleto['instrucoes1'] = $dadosboleto['instrucoes1'];
         $this->dadosboleto['instrucoes2'] = $dadosboleto['instrucoes2'];
@@ -75,8 +76,8 @@ class BoletoPHP
         $this->dadosboleto['carteira'] = $dadosboleto['carteira'];
         $this->dadosboleto['identificacao'] = $dadosboleto['identificacao'];
         $this->dadosboleto['cpf_cnpj'] = $dadosboleto['cpf_cnpj'];
-        $this->dadosboleto['endereco'] = $endereco['endereco'] . ' n&deg; ' . $endereco['numero'] . '<br /> ' . $endereco['complemento'] . ' - ' . $endereco['bairro'] . ' - ' . $endereco['cidade'] . ' / ' . $endereco['estado'] . ' <br/>CEP: ' . $endereco['cep'];
-        $this->dadosboleto['cidade_uf'] = $endereco['cidade'] . ' / ' . $endereco['estado'];
+        $this->dadosboleto['endereco'] = $empresa_endereco['endereco_completo'];
+        $this->dadosboleto['cidade_uf'] = $empresa_endereco['cidade'] . ' / ' . $empresa_endereco['estado'];
         $this->dadosboleto['cedente'] = $dadosboleto['cedente'];
 
         // TODO: sort for banco
