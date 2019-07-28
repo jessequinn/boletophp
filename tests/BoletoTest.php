@@ -11,7 +11,6 @@ final class BoletoTest extends TestCase
         $dadosboleto = [
             'prazo' => 3,
             'taxa' => 0,
-            'taxa_bancaria' => '',
             'demonstrativo3' => 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO',
             'instrucoes1' => '- Não receber após o vencimento',
             'instrucoes2' => '',
@@ -43,7 +42,7 @@ final class BoletoTest extends TestCase
         ];
 
         /** @var array $endereco */
-        $endereco = [
+        $client_endereco = [
             'endereco' => 'Rua joao pessoa',
             'numero' => 2832,
             'cidade' => 'Blumenau',
@@ -53,7 +52,15 @@ final class BoletoTest extends TestCase
             'cep' => '89035-256',
         ];
 
-        $boletoPHP = new BoletoPHP($dadosboleto, $order, $endereco);
+        /** @var array $empresa_endereco */
+        $empresa_endereco = [
+            'endereco_completo' => 'full address here',
+            'cidade' => 'Toronto',
+            'estado' => 'Ontario',
+            'nome' => '.COM',
+        ];
+
+        $boletoPHP = new BoletoPHP($dadosboleto, $order, $client_endereco, $empresa_endereco);
 
 //        var_dump($boletoPHP->getDadosboleto());
 

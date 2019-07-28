@@ -97,11 +97,11 @@
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
     <tr>
         <td width=41><img SRC="imagens/logo_empresa.png"></td>
-        <td class=ti
-            width=455>{{ dadosboleto.identificacao }} <?php echo isset($dadosboleto["cpf_cnpj"]) ? "<br>
-            ".$dadosboleto["cpf_cnpj"] : '' ?><br>
-            <?php echo $dadosboleto["endereco"]; ?><br>
-            <?php echo $dadosboleto["cidade_uf"]; ?><br>
+        <td class=ti width=455>
+            {{ dadosboleto.identificacao }}
+            {{ (dadosboleto.cpf_cnpj is empty) ? '<br>' . dadosboleto.cpf_cnpj : '' }}<br>
+            {{ dadosboleto.endereco }}<br>
+            {{ dadosboleto.cidade_uf }}<br>
         </td>
         <td align=RIGHT width=150 class=ti>&nbsp;</td>
     </tr>
