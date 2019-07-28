@@ -1,5 +1,5 @@
 {
-    "name": "cobregratis/boletophp",
+    "name": "jessequinn/boletophp",
     "description": "Projeto Código-Aberto de Sistema de Boletos bancários em PHP",
     "type": "library",
     "keywords": [
@@ -7,7 +7,7 @@
         "boleto",
         "boletophp"
     ],
-    "homepage": "http://boletophp.com.br/",
+    "homepage": "https://jessequinn.info",
     "require": {
         "php": ">=7",
         "twig/twig": "^2.0"

@@ -2,80 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b6f16e1-0e75-4a14-b349-93a45a996d13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/boletophp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoletoPHP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compilation_cache/9f/9fe94ffa9c474e2f95f6bee3082c92dec7cf940a1aef97e1947450102d629591.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/templates/layout_itau.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/BoletoTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/b.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/b.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/imgbrrazu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/imgbrrazu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/imgbrrlrj.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/imgbrrlrj.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/imgpxlazu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/imgpxlazu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logo_empresa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logo_empresa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobancoob.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobancoob.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobanespa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobanespa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobanestes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobanestes.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobesc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobesc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logobradesco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logobradesco.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logocaixa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logocaixa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logohsbc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logohsbc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logoitau.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logoitau.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logonossacaixa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logonossacaixa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logoreal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logoreal.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logosantander.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logosantander.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logosicredi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logosicredi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logosudameris.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logosudameris.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/logounibanco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/logounibanco.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagens/p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/imagens/p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_bancoob.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_bancoob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_banespa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_banespa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_banestes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_banestes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_bb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_besc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_besc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_bradesco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_bradesco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_cef.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_cef.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_cef_sigcb.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_cef_sigcb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_cef_sinco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_cef_sinco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_hsbc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_hsbc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_itau.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_itau.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_nossacaixa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_nossacaixa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_santander_banespa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_santander_banespa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_sicredi.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_sicredi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_sofisa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_sofisa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_sudameris.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_sudameris.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/funcoes_unibanco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/funcoes_unibanco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_bancoob.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_bancoob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_banespa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_banespa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_banestes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_banestes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_bb.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_bb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_besc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_besc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_bradesco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_bradesco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_cef.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_cef.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_cef_sinco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_cef_sinco.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_hsbc.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_hsbc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_itau.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_nossacaixa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_nossacaixa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_santander_banespa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_santander_banespa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_sicredi.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_sicredi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_sofisa.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_sofisa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_sudameris.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_sudameris.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/layout_unibanco.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/layout_unibanco.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,47 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/BoletoTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BoletoPHP.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="447" column="36" selection-start-line="447" selection-start-column="36" selection-end-line="447" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/layout_itau.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="900" column="11" lean-forward="true" selection-start-line="900" selection-start-column="11" selection-end-line="900" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/include/funcoes_itau.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1180">
-              <caret line="341" column="1" selection-start-line="65" selection-end-line="341" selection-end-column="1" />
+            <state relative-caret-position="152">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -163,13 +54,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BoletoPHP.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/templates/layout_itau.php" />
         <option value="$PROJECT_DIR$/src/BoletoPHP.php" />
         <option value="$PROJECT_DIR$/src/test.html" />
         <option value="$PROJECT_DIR$/tests/BoletoTest.php" />
         <option value="$PROJECT_DIR$/src/templates/layout_itau.html.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -248,6 +139,11 @@
               <item name="boletophp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="boletophp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boletophp" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -304,7 +200,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564318985281</updated>
-      <workItem from="1564318987065" duration="15235000" />
+      <workItem from="1564318987065" duration="15340000" />
     </task>
     <servers />
   </component>
@@ -341,7 +237,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15235000" />
+    <option name="totallyTimeSpent" value="15340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="3770" height="2133" extended-state="6" />
@@ -440,10 +336,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -454,10 +350,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="152">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
