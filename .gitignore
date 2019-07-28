@@ -1,2 +1,4 @@
 vendor/
 bin/
+*.lock
+src/compilation_cache
