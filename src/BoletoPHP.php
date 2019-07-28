@@ -120,7 +120,7 @@ class BoletoPHP
 
 
     /**
-     * Generate boleto in HTML format.
+     * Generate boleto in HTML format using twig.
      *
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
@@ -299,28 +299,6 @@ class BoletoPHP
      */
     private function module11($num, $base = 9, $r = 0)
     {
-        /**
-         *   Autor:
-         *           Pablo Costa <pablo@users.sourceforge.net>
-         *
-         *   Fun��o:
-         *    Calculo do Modulo 11 para geracao do digito verificador
-         *    de boletos bancarios conforme documentos obtidos
-         *    da Febraban - www.febraban.org.br
-         *
-         *   Entrada:
-         *     $num: string num�rica para a qual se deseja calcularo digito verificador;
-         *     $base: valor maximo de multiplicacao [2-$base]
-         *     $r: quando especificado um devolve somente o resto
-         *
-         *   Sa�da:
-         *     Retorna o Digito verificador.
-         *
-         *   Observa��es:
-         *     - Script desenvolvido sem nenhum reaproveitamento de c�digo pr� existente.
-         *     - Assume-se que a verifica��o do formato das vari�veis de entrada � feita antes da execu��o deste script.
-         */
-
         $soma = 0;
         $fator = 2;
 
@@ -502,6 +480,4 @@ class BoletoPHP
     {
         $this->dadosboleto = $dadosboleto;
     }
-
-
 }
