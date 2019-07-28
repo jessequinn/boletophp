@@ -60,7 +60,6 @@ final class BoletoTest extends TestCase
             'endereco_completo' => 'full address here',
             'cidade' => 'Toronto',
             'estado' => 'Ontario',
-            'nome' => '.COM',
         ];
 
         $boletoPHP = new BoletoPHP($dadosboleto, $order, $client_endereco, $empresa_endereco);
