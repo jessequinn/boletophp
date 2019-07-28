@@ -383,7 +383,7 @@
         </td>
         <td width=3 valign=bottom><img height=22 src=imagens/3.png width=2 border=0></td>
         <td class=cpt width=58 valign=bottom>
-            <div align=center><font class=bc><?php echo $dadosboleto["codigo_banco_com_dv"]?></font></div>
+            <div align=center><font class=bc>{{ adosboleto.codigo_banco_com_dv }}</font></div>
         </td>
         <td width=3 valign=bottom><img height=22 src=imagens/3.png width=2 border=0></td>
         <td class=ld align=right width=453 valign=bottom>
@@ -844,7 +844,7 @@
     <tr>
         <td class=cp valign=top width=7 height=12><img height=12 src=imagens/1.png width=1 border=0></td>
         <td class=cp valign=top width=659 height=12><span class="campo">
-<?php echo $dadosboleto["sacado"]?>
+                {{ dadosboleto.sacado }}
 </span>
         </td>
     </tr>
@@ -855,7 +855,8 @@
     <tr>
         <td class=cp valign=top width=7 height=12><img height=12 src=imagens/1.png width=1 border=0></td>
         <td class=cp valign=top width=659 height=12><span class="campo">
-<?php echo $dadosboleto["endereco1"]?>
+              {{ dadosboleto.endereco1 }}
+
 </span>
         </td>
     </tr>
@@ -867,7 +868,7 @@
         <td class=ct valign=top width=7 height=13><img height=13 src=imagens/1.png width=1 border=0></td>
         <td class=cp valign=top width=472 height=13>
   <span class="campo">
-  <?php echo $dadosboleto["endereco2"]?>
+              {{ dadosboleto.endereco2 }}
   </span></td>
         <td class=ct valign=top width=7 height=13><img height=13 src=imagens/1.png width=1 border=0></td>
         <td class=ct valign=top width=180 height=13>C�d.
