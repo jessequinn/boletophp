@@ -42,3 +42,22 @@ Sim, pois facilita para um desenvolvedor para que seja dado continuidade no Proj
 | Bancoob	                                    | 01 [SICOOB] - Sem registro                                         |
 | BESC	                                      | 25 - Sem registro                                                  |
 | Sicredi	                                    | A - Simples                                                        |
+
+
+## Update
+To install via composer:
+
+```
+{
+  "require": {
+    "jessequinn/boletophp": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/jessequinn/boletophp"
+    }
+  ]
+}
+
+```
