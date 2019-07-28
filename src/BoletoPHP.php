@@ -33,7 +33,6 @@ class BoletoPHP
      */
     public function __construct($dadosboleto, $order, $client_endereco, $empresa_endereco)
     {
-
         $this->loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
         $this->twig = new \Twig\Environment($this->loader, ['cache' => __DIR__ . '/compilation_cache']);
         $function = new \Twig\TwigFunction('fbarcode', [$this, 'fbarcode']);
@@ -56,9 +55,9 @@ class BoletoPHP
         $this->dadosboleto['sacado'] = $order['nome_completo'];
         $this->dadosboleto['endereco1'] = $client_endereco['endereco'] . ', ' . $client_endereco['numero'];
         $this->dadosboleto['endereco2'] = $client_endereco['cidade'] . ' - ' . $client_endereco['estado'] . ' -  CEP: ' . $client_endereco['cep'];
-        $this->dadosboleto['demonstrativo1'] = 'Pagamento de Compra na ' . $empresa_endereco['nome'];
-        $this->dadosboleto['demonstrativo2'] = 'Taxa bancária - ' . $dadosboleto['especie'] . ' ' . number_format($dadosboleto['taxa'], 2, ',', '');
-        $this->dadosboleto['demonstrativo3'] = 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO';
+        $this->dadosboleto['demonstrativo1'] = $dadosboleto['demonstrativo1'];
+        $this->dadosboleto['demonstrativo2'] = $dadosboleto['demonstrativo2'];
+        $this->dadosboleto['demonstrativo3'] = $dadosboleto['demonstrativo3'];
         $this->dadosboleto['instrucoes1'] = $dadosboleto['instrucoes1'];
         $this->dadosboleto['instrucoes2'] = $dadosboleto['instrucoes2'];
         $this->dadosboleto['instrucoes3'] = $dadosboleto['instrucoes3'];
@@ -81,33 +80,16 @@ class BoletoPHP
         $this->dadosboleto['cedente'] = $dadosboleto['cedente'];
 
         // TODO: sort for banco
-        $codigobanco = "341";
-        $codigo_banco_com_dv = $this->geraCodigoBanco($codigobanco);
-        $nummoeda = "9";
+        $codigo_banco_com_dv = $this->geraCodigoBanco($dadosboleto['codigo_banco']);
         $fatorVencimento = $this->fatorVencimento($this->dadosboleto["data_vencimento"]);
-
-        //valor tem 10 digitos, sem virgula
         $valor = $this->formataNumero($this->dadosboleto["valor_boleto"], 10, 0, "valor");
-
-        //agencia � 4 digitos
         $agencia = $this->formataNumero($this->dadosboleto["agencia"], 4, 0);
-
-        //conta � 5 digitos + 1 do dv
         $conta = $this->formataNumero($this->dadosboleto["conta"], 5, 0);
         $conta_dv = $this->formataNumero($this->dadosboleto["conta_dv"], 1, 0);
-
-        //carteira 175
         $carteira = $this->dadosboleto["carteira"];
-
-        //nosso_numero no maximo 8 digitos
         $nnum = $this->formataNumero($this->dadosboleto["nosso_numero"], 8, 0);
-
-        $codigo_barras = $codigobanco . $nummoeda . $fatorVencimento . $valor . $carteira . $nnum . $this->module10($agencia . $conta . $carteira . $nnum) . $agencia . $conta . $this->module10($agencia . $conta) . '000';
-
-        // 43 numeros para o calculo do digito verificador
+        $codigo_barras = $dadosboleto['codigo_banco'] . $dadosboleto['nummoeda'] . $fatorVencimento . $valor . $carteira . $nnum . $this->module10($agencia . $conta . $carteira . $nnum) . $agencia . $conta . $this->module10($agencia . $conta) . '000';
         $dv = $this->digitoVerificadorBarra($codigo_barras);
-
-        // Numero para o codigo de barras com 44 digitos
         $linha = substr($codigo_barras, 0, 4) . $dv . substr($codigo_barras, 4, 43);
         $nossonumero = $carteira . '/' . $nnum . '-' . $this->module10($agencia . $conta . $carteira . $nnum);
         $agencia_codigo = $agencia . " / " . $conta . "-" . $this->module10($agencia . $conta);

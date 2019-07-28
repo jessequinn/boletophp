@@ -11,8 +11,9 @@ final class BoletoTest extends TestCase
         $dadosboleto = [
             'prazo' => 3,
             'taxa' => 0,
-            'demonstrativo3' => 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO',
-            'instrucoes1' => '- Não receber após o vencimento',
+            'demonstrativo1' => 'Pagamento de Compra na .COM',
+            'demonstrativo2' => 'Taxa bancária - R$ ' . number_format(0, 2, ',', ''), // based on taxa = 0
+            'demonstrativo3' => 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO',            'instrucoes1' => '- Não receber após o vencimento',
             'instrucoes2' => '',
             'instrucoes3' => '',
             'instrucoes4' => '',
@@ -21,6 +22,8 @@ final class BoletoTest extends TestCase
             'aceite' => '',
             'especie' => 'R$',
             'especie_doc' => '',
+            'codigo_banco' => '341', // itau
+            'nummoeda' => '9', // itau TODO: what does this number mean?
             'agencia' => '1565',
             'conta' => '13877',
             'conta_dv' => '4',
@@ -62,9 +65,7 @@ final class BoletoTest extends TestCase
 
         $boletoPHP = new BoletoPHP($dadosboleto, $order, $client_endereco, $empresa_endereco);
 
-        echo $boletoPHP->getDadosboleto()['codigo_barras'];
-
-        file_put_contents('test.html', $boletoPHP->generateBoleto('sicredi'));
+//        file_put_contents('test.html', $boletoPHP->generateBoleto('itau'));
 
         $this->assertEquals('19', $boletoPHP->getDadosboleto()['inicio_nosso_numero']);
     }
