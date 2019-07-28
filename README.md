@@ -43,6 +43,64 @@ Sim, pois facilita para um desenvolvedor para que seja dado continuidade no Proj
 | BESC	                                      | 25 - Sem registro                                                  |
 | Sicredi	                                    | A - Simples                                                        |
 
+## How to use
+Once install via composer, see below, it is as simple as calling the constructor with 4 parameters:
+
+```
+/** @var array $dadosboleto */
+$dadosboleto = [
+    'prazo' => 3,
+    'taxa' => 0,
+    'demonstrativo3' => 'ATENÇÃO: SE SEU PEDIDO FOI FEITO NO PONTO DE APOIO NÃO PAGUE NO BANCO, PAGUE DIRETAMENTE NO PONTO DE APOIO',
+    'instrucoes1' => '- Não receber após o vencimento',
+    'instrucoes2' => '',
+    'instrucoes3' => '',
+    'instrucoes4' => '',
+    'quantidade' => '',
+    'valor_unitario' => '',
+    'aceite' => '',
+    'especie' => _parametro('denominacao.abreviada'),
+    'especie_doc' => '',
+    'agencia' => '1565',
+    'conta' => '13877',
+    'conta_dv' => '4',
+    'posto' => '03',
+    'byte_idt' => '2',
+    'carteira' => '03',
+    'identificacao' => 'BoletoPhp - Código Aberto de Sistema de Boletos',
+    'cpf_cnpj' => '',
+    'cedente' => 'Rede Facil Brasil Ltda - ME',
+];
+
+/** @var array $order */
+$order = [
+    'id' => $objPedido->getId(),
+    'data' => $objPedido->getData('Y-m-d'),
+    'valor_total' => $objPedido->getValorTotal(),
+    'nome_completo' => $objPedido->getCliente()->getNomeCompleto(),
+];
+
+/** @var array $endereco */
+$client_endereco = [
+    'endereco' => $objEndereco->getEndereco(),
+    'numero' => $objEndereco->getNumero(),
+    'cidade' => $objEndereco->getCidade()->getNome(),
+    'estado' => $objEndereco->getCidade()->getEstado()->getNome(),
+    'bairro' => '',
+    'complemento' => '',
+    'cep' => $objEndereco->getCep(),
+];
+
+/** @var array $empresa_endereco */
+$empresa_endereco = [
+    'endereco_completo' => EmpresaPeer::getInstance()->getEnderecoCompleto(),
+    'cidade' => EmpresaPeer::getInstance()->getCidade(),
+    'estado' => EmpresaPeer::getInstance()->getEstado(),
+    'nome' => EmpresaPeer::getInstance()->getNome(),
+];
+    
+$boletoPHP = new \BoletoPHP($dadosboleto, $order, $client_endereco, $empresa_endereco);
+```
 
 ## Update
 To install via composer:
